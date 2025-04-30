@@ -1,0 +1,50 @@
+body {
+    background-color: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1 {
+    color: #c71585;
+    margin-top: 20px;
+  }
+  
+  .corazon {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: red;
+    transform: rotate(-45deg);
+    animation: latir 1s infinite;
+  }
+  
+  .corazon::before,
+  .corazon::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .corazon::before {
+    top: -50px;
+    left: 0;
+  }
+  
+  .corazon::after {
+    left: 50px;
+    top: 0;
+  }
+  
+  @keyframes latir {
+    0%, 100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+  }
+  
